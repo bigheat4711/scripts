@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 call plug#end()
 #… then run the following in Vim:
+#Quelle https://vimawesome.com/plugin/gruvbox
 
 :source %
 :PlugInstall
