@@ -1,0 +1,34 @@
+#!/bin/bash
+svn checkout https://svn.1and1.org/svn/sales/modules/java/access/order/order-model --depth immediates
+svn checkout https://svn.1and1.org/svn/PFX/order-modules/telesales-cart --depth immediates
+svn checkout https://svn.1and1.org/svn/PFX/order-modules/cart --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/apps/access/mobile/mobile-telesales-upgrade-de --depth immediates
+svn checkout https://svn.1and1.org/svn/PFX/dsl/dslorder-de-cart --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/java/mss-client --depth immediates
+svn checkout https://svn.1and1.org/svn/spa/modules/proms-archive --depth immediates
+svn checkout https://svn.1and1.org/svn/spa/modules/mobile-upgrade-mock-data --depth immediates
+svn checkout https://svn.1and1.org/svn/PFX/services/service-reg --depth immediates
+svn checkout https://svn.1and1.org/svn/PFX/dsl/dslupgrade-de-cart --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/tools/maven/plugins/jasmincheck --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/frontend/frontend-access-common --depth immediates
+svn checkout https://svn.1and1.org/svn/PFX/dsl/access-java --depth immediates
+svn checkout https://svn.1and1.org/svn/spa/modules/webservices/dipper-client --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/java/comet-client --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/java/cart/mobile-upgrade-cart --depth immediates
+svn checkout https://svn.1and1.org/svn/spa/modules/delivery-availability-service --depth immediates
+svn checkout https://svn.1and1.org/svn/PFX/order-modules/integration-test --depth immediates
+svn checkout https://svn.1and1.org/svn/access_telesales --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/java/mobile-sales-support-client --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/java/access/order/order-mapping --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/java/cart/mobile-de-cart --depth immediates
+svn checkout https://svn.1and1.org/svn/PFX/dsl/mobileorder-de-cart --depth immediates
+svn checkout https://svn.1and1.org/svn/PFX/order-modules/jumpto --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/apps/access/mobile/mobile-upgrade-de --depth immediates
+svn checkout https://svn.1and1.org/svn/spa/maven/plugins/fit --depth immediates
+svn checkout https://svn.1and1.org/svn/spa/tools/maven/plugins/proms-archive-maven-plugin --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/middleware/storebasketservice --depth immediates
+svn checkout https://svn.1and1.org/svn/access_mobile_nk --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/java/proms-client --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/java/access/mobile-upgrade-common --depth immediates
+svn checkout https://svn.1and1.org/svn/sales/modules/java/access/mobile-upgrade-mocks --depth immediates
+find -name .svn -execdir svn up trunk --set-depth infinity \;
