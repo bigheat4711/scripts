@@ -24,7 +24,7 @@ then
   exit 1;
 fi
 
-~/scripts/recycleIn1Month.sh $output
+~/projects/scripts/recycleIn1Month.sh $output
 
 echo "Deleting original file/folder";
 rm -rf $1;

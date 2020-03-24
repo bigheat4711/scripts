@@ -7,7 +7,7 @@ timestamp=$(date '+%Y-%m-%d-%H-%M-%S')
 dst=~/nethome/autodelete/$scope-$timestamp
 
 echo "INFO: Starting $0 $timestamp";
-tar czf $output ~/scripts/ ~/bp/* ~/repos/ ~/.*rc ~/.bash* ~/.config/terminator/config ~/?.txt ~/.ssh ~/.m2/settings.xml ~/.squirrel-sql/SQLAliases23.xml
+tar czf $output ~/projects/scripts/ ~/bp/* ~/repos/ ~/.*rc ~/.bash* ~/.config/terminator/config ~/?.txt ~/.ssh ~/.m2/settings.xml ~/.squirrel-sql/SQLAliases23.xml
 
 cmp --quiet $output $outputold && echo "INFO: Files are identical" || ( echo "INFO: Files differ -> store in $dst" && mkdir $dst && cp --backup=t $output $dst );
 mv $output $outputold;

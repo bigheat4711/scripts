@@ -6,7 +6,7 @@ function printDate () {
   date "+%F %T " | tr -d "\n" >> $output;
 }
 
-result=$(/home/cgrau/scripts/updates/coursePlayVersion.sh)
+result=$(/home/cgrau/projects/scripts/updates/coursePlayVersion.sh)
 echo $result
 if [ $result != "v4.01" ] ; then
   printDate
@@ -15,7 +15,7 @@ if [ $result != "v4.01" ] ; then
   /usr/bin/zenity --info --title="checkEvents" --text="$text" --display=:0.0;
 fi
 
-#result=$(/home/cgrau/scripts/updates/ls17UpdateVersion.pl)
+#result=$(/home/cgrau/projects/scripts/updates/ls17UpdateVersion.pl)
 #echo $result
 #if [ $result != "1.3.1" ] ; then
   #printDate
@@ -24,7 +24,7 @@ fi
   #/usr/bin/zenity --info --title="checkEvents" --text="$text" --display=:0.0;
 #fi
 
-#result=$(/home/cgrau/scripts/updates/wildfly-maven-plugin.pl)
+#result=$(/home/cgrau/projects/scripts/updates/wildfly-maven-plugin.pl)
 #echo $result
 #if [ $result != "16" ] ; then
 #  printDate
