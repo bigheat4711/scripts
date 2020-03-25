@@ -17,6 +17,8 @@ for FILE in $FILES; do
     continue
   fi
   
+  # touch updates the timestamp of file/folder
+  touch $FILE 
   mv $FILE ~/.autodelete/
   
   if [ $? != 0 ];

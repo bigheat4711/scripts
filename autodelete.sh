@@ -1,3 +1,3 @@
 #!/bin/bash
-find ~/nethome/autodelete/ -mtime +30 -exec rm -rf {} \;
-find ~/.autodelete/ -mtime +30 -exec rm -rf {} \;
+find ~/nethome/autodelete/ -maxdepth 1 -mtime +30 -exec rm -rf {} \;
+find ~/.autodelete/        -maxdepth 1 -mtime +30 -exec rm -rf {} \;
