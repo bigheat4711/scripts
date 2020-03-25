@@ -11,7 +11,7 @@ fi
 
 for FILE in $FILES; do
   echo "Compress $FILE"
-  #echo "$FILE will be compressed, moved to ~/nethome/autodelete/ and deleted in 30 days.";
+  #echo "$FILE will be compressed, moved to ~/.autodelete/ and deleted in 30 days.";
   if [ ! -r $FILE ];
   then
     echo "File doesn't exist -> continue";
@@ -19,7 +19,8 @@ for FILE in $FILES; do
   fi
 
   FILE_COMPRESSED=$FILE.tar.gz
-  tar czf $FILE_COMPRESSED $FILE
+  tar cf - $FILE | pv -s $(du -sb $FILE | awk '{print $1}') | gzip > big-files.tar.gz
+  #Quelle: https://superuser.com/questions/168749/is-there-a-way-to-see-any-tar-progress-per-file
 
   if [ $? != 0 ];
   then

@@ -17,11 +17,11 @@ for FILE in $FILES; do
     continue
   fi
   
-  mv $FILE ~/nethome/autodelete/
+  mv $FILE ~/.autodelete/
   
   if [ $? != 0 ];
   then
-    echo "Can't move $FILE to ~/nethome/autodelete/ -> continue";
+    echo "Can't move $FILE to ~/.autodelete/ -> continue";
     continue
   fi
 done
