@@ -19,7 +19,8 @@ for FILE in $FILES; do
   
   # touch updates the timestamp of file/folder
   touch $FILE 
-  mv $FILE ~/.autodelete/
+  test -d ~/.autodelete || mkdir ~/.autodelete
+  mv -v --backup=t $FILE ~/.autodelete/
   
   if [ $? != 0 ];
   then

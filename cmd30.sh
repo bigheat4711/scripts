@@ -9,6 +9,8 @@ then
   exit 1;
 fi
 
+which pv >/dev/null || { echo "Can't find 'pv'. Please install with: sudo apt-get install pv"; exit 2; }
+
 for FILE in $FILES; do
   echo "Compress $FILE"
   #echo "$FILE will be compressed, moved to ~/.autodelete/ and deleted in 30 days.";
@@ -19,7 +21,7 @@ for FILE in $FILES; do
   fi
 
   FILE_COMPRESSED=$FILE.tar.gz
-  tar cf - $FILE | pv -s $(du -sb $FILE | awk '{print $1}') | gzip > big-files.tar.gz
+  tar cf - $FILE | pv -s $(du -sb $FILE | awk '{print $1}') | gzip > $FILE_COMPRESSED
   #Quelle: https://superuser.com/questions/168749/is-there-a-way-to-see-any-tar-progress-per-file
 
   if [ $? != 0 ];
@@ -37,3 +39,4 @@ done
 ~/projects/scripts/md30.sh "${FILES_COMPRESSSED[@]}"
 rm -rf $FILE;
 echo "cmd30.sh: (2/2) done"
+echo "Ensure autodelete cron job is active"
