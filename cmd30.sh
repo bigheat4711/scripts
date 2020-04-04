@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+# TODO Known issues:
+# FILES may not end with "/"
+
 FILES="$@"
 echo "cmd30.sh: compress, move and delete in 30 days: $FILES"
 
